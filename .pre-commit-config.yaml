@@ -10,7 +10,7 @@ repos:
         args: [--no-error-on-unmatched-pattern]
 
   - repo: https://github.com/oxc-project/mirrors-oxlint
-    rev: v1.72.0
+    rev: v1.79.0
     hooks:
       - id: oxlint
         args: [--quiet]
