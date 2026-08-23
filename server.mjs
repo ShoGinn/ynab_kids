@@ -109,8 +109,8 @@ async function serveStatic(request, response, pathname) {
 if (!Number.isInteger(PORT) || PORT < 1 || PORT > 65_535) {
   throw new Error("PORT must be a valid TCP port");
 }
-if (SITE_PASSWORD.length < 12) {
-  throw new Error("SITE_PASSWORD must contain at least 12 characters");
+if (SITE_PASSWORD.length === 0) {
+  throw new Error("SITE_PASSWORD is required");
 }
 
 const server = createServer(async (request, response) => {

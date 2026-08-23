@@ -26,7 +26,7 @@ Copy `.env.example` to `.env` for local development. Configure the same variable
 - `YNAB_GROUP_NAMES` — optional comma-separated category group names.
 - `YNAB_CATEGORY_NAMES` — optional comma-separated category names within the selected groups.
 - `SITE_USERNAME` — browser login name; defaults to `family`.
-- `SITE_PASSWORD` — browser password; required and must be at least 12 characters.
+- `SITE_PASSWORD` — browser password; required, with no enforced minimum length.
 - `CACHE_TTL_SECONDS` — on-demand cache lifetime; defaults to `600` (10 minutes).
 
 Set at least one of `YNAB_GROUP_IDS` or `YNAB_GROUP_NAMES`.
