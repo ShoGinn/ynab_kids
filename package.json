@@ -13,7 +13,7 @@
     "start:local": "node --env-file=.env server.mjs"
   },
   "devDependencies": {
-    "oxfmt": "^0.57.0",
+    "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0"
   }
 }

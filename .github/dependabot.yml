@@ -1,20 +1,5 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "07:00"
-      timezone: "America/Chicago"
-    open-pull-requests-limit: 5
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    labels:
-      - "dependencies"
-      - "github-actions"
-
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -31,6 +16,11 @@ updates:
     labels:
       - "dependencies"
       - "javascript"
+    groups:
+      oxc-tools:
+        patterns:
+          - "oxfmt"
+          - "oxlint"
 
   - package-ecosystem: "pre-commit"
     directory: "/"
@@ -46,3 +36,8 @@ updates:
     labels:
       - "dependencies"
       - "pre-commit"
+    groups:
+      oxc-tools:
+        patterns:
+          - "*mirrors-oxfmt*"
+          - "*mirrors-oxlint*"
