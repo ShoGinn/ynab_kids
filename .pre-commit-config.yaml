@@ -1,0 +1,35 @@
+default_install_hook_types:
+  - pre-commit
+  - pre-push
+
+repos:
+  - repo: https://github.com/oxc-project/mirrors-oxfmt
+    rev: v0.57.0
+    hooks:
+      - id: oxfmt
+        args: [--no-error-on-unmatched-pattern]
+
+  - repo: https://github.com/oxc-project/mirrors-oxlint
+    rev: v1.72.0
+    hooks:
+      - id: oxlint
+        args: [--quiet]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-json
+        exclude: ^data/latest\.json$
+
+  - repo: local
+    hooks:
+      - id: quality-check
+        name: pnpm quality check
+        entry: pnpm run check
+        language: system
+        pass_filenames: false
+        stages: [pre-push]

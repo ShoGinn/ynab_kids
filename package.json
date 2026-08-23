@@ -1,0 +1,19 @@
+{
+  "name": "ynab-kids",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "check": "pnpm run lint && pnpm run format:check",
+    "start:local": "node --env-file=.env server.mjs"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.57.0",
+    "oxlint": "^1.72.0"
+  }
+}

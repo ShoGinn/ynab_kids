@@ -1,0 +1,8 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "printf": true,
+    "command": true,
+    "gh": true,
+    "git remote": true
+  }
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Kids Budget Snapshot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        const version = Date.now();
+        const stylesheet = document.createElement("link");
+        stylesheet.rel = "stylesheet";
+        stylesheet.href = `styles.css?v=${version}`;
+        document.head.appendChild(stylesheet);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <main class="layout">
+      <header class="hero">
+        <p class="eyebrow">Family Finance Board</p>
+        <h1>Kids Budget Snapshot</h1>
+        <p class="subtitle">Always up to date from your YNAB plan.</p>
+        <p id="updatedAt" class="timestamp">Loading latest update...</p>
+      </header>
+
+      <section id="groups" class="groups" aria-live="polite"></section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <footer class="legal">
+      We are not affiliated, associated, or in any way officially connected with YNAB or any of its
+      subsidiaries or affiliates. The official YNAB website can be found at https://www.ynab.com.
+      The names YNAB and You Need A Budget, as well as related names, tradenames, marks, trademarks,
+      emblems, and images are registered trademarks of YNAB.
+    </footer>
+
+    <script type="module">
+      const version = Date.now();
+      import(`./app.js?v=${version}`);
+    </script>
+  </body>
+</html>
